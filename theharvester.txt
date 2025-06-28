@@ -1,0 +1,108 @@
+theHarvestor -d certifiedhacker.com -b all -l 500
+
+
+[*] Searching Anubis. 
+        Searching 0 results.                                                                      
+[*] Searching Bing.                                                                               
+[*] Searching Baidu.                                                                              
+        Searching results.                                                                        
+[*] Searching Certspotter.                                                                        
+An exception occurred: list index out of range                                                    
+Unclosed client session                                                                           
+client_session: <aiohttp.client.ClientSession object at 0xffff83400c20>                           
+[*] Searching Dnsdumpster.                                                                        
+[*] Searching Brave.                                                                              
+[*] Searching CRTsh.                                                                              
+[*] Searching Duckduckgo.                                                                         
+[*] Searching Otx.                                                                                
+[*] Searching Hackertarget.                                                                       
+[*] Searching Rapiddns.                                                                           
+Sitedossier module has triggered a captcha on first iteration, no results can be found.           
+Change IPs, manually solve the captcha, or wait before rerunning Sitedossier module               
+[*] Searching Sitedossier.                                                                        
+[*] Searching Subdomaincenter.                                                                    
+An exception has occurred: 500, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url='https://api.threatminer.org/v2/domain.php?q=certifiedhacker.com&rt=5'     
+[*] Searching Urlscan.                                                                            
+[*] Searching Subdomainfinderc99.                                                                 
+[*] Searching Yahoo.                                                                              
+                                                                                                  
+[*] ASNS found: 2                                                                                 
+--------------------                                                                              
+AS26337                                                                                           
+AS46606                                                                                           
+                                                                                                  
+[*] Interesting Urls found: 7                                                                     
+--------------------                                                                              
+http://certifiedhacker.com/                                                                       
+http://www.certifiedhacker.com/                                                                   
+https://certifiedhacker.com/                                                                      
+https://certifiedhacker.com/index.html                                                            
+https://demo.certifiedhacker.com/                                                                 
+https://www.certifiedhacker.com/                                                                  
+https://www.certifiedhacker.com/?fbclid=IwAR3stuL_17QRC5vOIFrUiF7B-AVX9O1sQEOAfzBYvgEaycSumhKA6vjmEuE                                                                                               
+                                                                                                  
+[*] LinkedIn Links found: 0                                                                       
+---------------------                                                                             
+                                                                                                  
+[*] IPs found: 3                                                                                  
+-------------------                                                                               
+162.241.216.11                                                                                    
+69.89.31.193                                                                                      
+                                                                                                  
+[*] No emails found.                                                                              
+                                                                                                  
+[*] Hosts found: 53                                                                               
+---------------------                                                                             
+3dWww.certifiedhacker.com                                                                         
+Www.certifiedhacker.com                                                                           
+autodiscover.certifiedhacker.com                                                                  
+autodiscover.certifiedhacker.com:162.241.216.11                                                   
+autodiscover.demo.certifiedhacker.com                                                             
+autodiscover.demo.certifiedhacker.com:162.241.216.11                                              
+blog.certifiedhacker.com                                                                          
+blog.certifiedhacker.com:162.241.216.11                                                           
+ciphershield.certifiedhacker.com                                                                  
+ciphershield.certifiedhacker.com:66.235.200.145                                                   
+cpanel.certifiedhacker.com                                                                        
+cpanel.certifiedhacker.com:162.241.216.11                                                         
+cpanel.demo.certifiedhacker.com                                                                   
+cpcalendars.certifiedhacker.com                                                                   
+cpcalendars.demo.certifiedhacker.com                                                              
+cpcalendars.demo.certifiedhacker.com:162.241.216.11                                               
+cpcontacts.certifiedhacker.com                                                                    
+cpcontacts.demo.certifiedhacker.com                                                               
+demo.certifiedhacker.com                                                                          
+demo.certifiedhacker.com:162.241.216.11                                                           
+events.certifiedhacker.com                                                                        
+events.certifiedhacker.com:162.241.216.11                                                         
+fleet.certifiedhacker.com                                                                         
+fleet.certifiedhacker.com:162.241.216.11                                                          
+iam.certifiedhacker.com                                                                           
+iam.certifiedhacker.com:162.241.216.11                                                            
+itf.certifiedhacker.com                                                                           
+itf.certifiedhacker.com:162.241.216.11                                                            
+mail.certifiedhacker.com                                                                          
+mail.certifiedhacker.com:162.241.216.11                                                           
+mail.demo.certifiedhacker.com                                                                     
+mail.demo.certifiedhacker.com:162.241.216.11                                                      
+news.certifiedhacker.com                                                                          
+news.certifiedhacker.com:162.241.216.11                                                           
+notifications.certifiedhacker.com                                                                 
+notifications.certifiedhacker.com:162.241.216.11                                                  
+pstn.certifiedhacker.com                                                                          
+pstn.certifiedhacker.com:162.241.216.11                                                           
+sftp.certifiedhacker.com                                                                          
+sftp.certifiedhacker.com:162.241.216.11                                                           
+soc.certifiedhacker.com                                                                           
+soc.certifiedhacker.com:162.241.216.11                                                            
+trustcenter.certifiedhacker.com                                                                   
+trustcenter.certifiedhacker.com:162.241.216.11                                                    
+webdisk.certifiedhacker.com                                                                       
+webdisk.certifiedhacker.com:162.241.216.11                                                        
+webdisk.demo.certifiedhacker.com                                                                  
+webdisk.demo.certifiedhacker.com:162.241.216.11                                                   
+webmail.certifiedhacker.com                                                                       
+webmail.certifiedhacker.com:162.241.216.11                                                        
+webmail.demo.certifiedhacker.com                                                                  
+website-215f0f34.certifiedhacker.com                                                              
+website-215f0f34.certifiedhacker.com:162.241.216.11   

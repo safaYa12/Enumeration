@@ -1,0 +1,14 @@
+Administrator
+admin
+guest
+user
+root
+msfadmin
+test
+support
+service
+backup
+WORKGROUP
+workgroup
+anonymous
+

@@ -1,0 +1,367 @@
+nmap -A -T4 -D 192.168.0.150 192.168.0.1/24
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2025-01-20 03:12 +06
+Nmap scan report for 192.168.0.1
+Host is up (0.0093s latency).
+Not shown: 999 closed tcp ports (reset)
+PORT   STATE SERVICE VERSION
+80/tcp open  http    GoAhead WebServer
+|_http-server-header: GoAhead-Webs
+| http-title: Tenda | LOGIN
+|_Requested resource was http://192.168.0.1/login.html
+MAC Address: E8:65:D4:60:4B:B0 (Tenda Technology,Ltd.Dongguan branch)
+Device type: general purpose
+Running: Wind River VxWorks
+OS CPE: cpe:/o:windriver:vxworks
+OS details: VxWorks
+Network Distance: 1 hop
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   9.34 ms 192.168.0.1
+
+Nmap scan report for 192.168.0.101
+Host is up (0.0040s latency).
+Not shown: 998 closed tcp ports (reset)
+PORT     STATE SERVICE VERSION
+5000/tcp open  rtsp
+|_rtsp-methods: ERROR: Script execution failed (use -d to debug)
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 403 Forbidden
+|     Content-Length: 0
+|     Server: AirTunes/835.19.5
+|     X-Apple-ProcessingTime: 0
+|     X-Apple-RequestReceivedTimestamp: 1000379423
+|   GetRequest: 
+|     HTTP/1.1 403 Forbidden
+|     Content-Length: 0
+|     Server: AirTunes/835.19.5
+|     X-Apple-ProcessingTime: 7
+|     X-Apple-RequestReceivedTimestamp: 1000374374
+|   HTTPOptions: 
+|     HTTP/1.1 403 Forbidden
+|     Content-Length: 0
+|     Server: AirTunes/835.19.5
+|     X-Apple-ProcessingTime: 0
+|     X-Apple-RequestReceivedTimestamp: 1000379393
+|   RTSPRequest: 
+|     RTSP/1.0 403 Forbidden
+|     Content-Length: 0
+|     Server: AirTunes/835.19.5
+|     X-Apple-ProcessingTime: 0
+|     X-Apple-RequestReceivedTimestamp: 1000374391
+|   SIPOptions: 
+|     RTSP/1.0 403 Forbidden
+|     Content-Length: 0
+|     Server: AirTunes/835.19.5
+|     CSeq: 42 OPTIONS
+|     X-Apple-ProcessingTime: 1
+|_    X-Apple-RequestReceivedTimestamp: 1000379430
+7000/tcp open  rtsp
+|_irc-info: Unable to open connection
+|_rtsp-methods: ERROR: Script execution failed (use -d to debug)
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 403 Forbidden
+|     Content-Length: 0
+|     Server: AirTunes/835.19.5
+|     X-Apple-ProcessingTime: 2
+|     X-Apple-RequestReceivedTimestamp: 1000399430
+|   GetRequest: 
+|     HTTP/1.1 403 Forbidden
+|     Content-Length: 0
+|     Server: AirTunes/835.19.5
+|     X-Apple-ProcessingTime: 0
+|     X-Apple-RequestReceivedTimestamp: 1000394355
+|   HTTPOptions: 
+|     HTTP/1.1 403 Forbidden
+|     Content-Length: 0
+|     Server: AirTunes/835.19.5
+|     X-Apple-ProcessingTime: 1
+|     X-Apple-RequestReceivedTimestamp: 1000394403
+|   RTSPRequest: 
+|     RTSP/1.0 403 Forbidden
+|     Content-Length: 0
+|     Server: AirTunes/835.19.5
+|     X-Apple-ProcessingTime: 0
+|     X-Apple-RequestReceivedTimestamp: 1000394415
+|   SIPOptions: 
+|     RTSP/1.0 403 Forbidden
+|     Content-Length: 0
+|     Server: AirTunes/835.19.5
+|     CSeq: 42 OPTIONS
+|     X-Apple-ProcessingTime: 0
+|_    X-Apple-RequestReceivedTimestamp: 1000399455
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port5000-TCP:V=7.94SVN%I=7%D=1/20%Time=678D6AEE%P=aarch64-unknown-linux
+SF:-gnu%r(GetRequest,91,"HTTP/1\.1\x20403\x20Forbidden\r\nContent-Length:\
+SF:x200\r\nServer:\x20AirTunes/835\.19\.5\r\nX-Apple-ProcessingTime:\x207\
+SF:r\nX-Apple-RequestReceivedTimestamp:\x201000374374\r\n\r\n")%r(RTSPRequ
+SF:est,91,"RTSP/1\.0\x20403\x20Forbidden\r\nContent-Length:\x200\r\nServer
+SF::\x20AirTunes/835\.19\.5\r\nX-Apple-ProcessingTime:\x200\r\nX-Apple-Req
+SF:uestReceivedTimestamp:\x201000374391\r\n\r\n")%r(HTTPOptions,91,"HTTP/1
+SF:\.1\x20403\x20Forbidden\r\nContent-Length:\x200\r\nServer:\x20AirTunes/
+SF:835\.19\.5\r\nX-Apple-ProcessingTime:\x200\r\nX-Apple-RequestReceivedTi
+SF:mestamp:\x201000379393\r\n\r\n")%r(FourOhFourRequest,91,"HTTP/1\.1\x204
+SF:03\x20Forbidden\r\nContent-Length:\x200\r\nServer:\x20AirTunes/835\.19\
+SF:.5\r\nX-Apple-ProcessingTime:\x200\r\nX-Apple-RequestReceivedTimestamp:
+SF:\x201000379423\r\n\r\n")%r(SIPOptions,A3,"RTSP/1\.0\x20403\x20Forbidden
+SF:\r\nContent-Length:\x200\r\nServer:\x20AirTunes/835\.19\.5\r\nCSeq:\x20
+SF:42\x20OPTIONS\r\nX-Apple-ProcessingTime:\x201\r\nX-Apple-RequestReceive
+SF:dTimestamp:\x201000379430\r\n\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port7000-TCP:V=7.94SVN%I=7%D=1/20%Time=678D6B02%P=aarch64-unknown-linux
+SF:-gnu%r(GetRequest,91,"HTTP/1\.1\x20403\x20Forbidden\r\nContent-Length:\
+SF:x200\r\nServer:\x20AirTunes/835\.19\.5\r\nX-Apple-ProcessingTime:\x200\
+SF:r\nX-Apple-RequestReceivedTimestamp:\x201000394355\r\n\r\n")%r(HTTPOpti
+SF:ons,91,"HTTP/1\.1\x20403\x20Forbidden\r\nContent-Length:\x200\r\nServer
+SF::\x20AirTunes/835\.19\.5\r\nX-Apple-ProcessingTime:\x201\r\nX-Apple-Req
+SF:uestReceivedTimestamp:\x201000394403\r\n\r\n")%r(RTSPRequest,91,"RTSP/1
+SF:\.0\x20403\x20Forbidden\r\nContent-Length:\x200\r\nServer:\x20AirTunes/
+SF:835\.19\.5\r\nX-Apple-ProcessingTime:\x200\r\nX-Apple-RequestReceivedTi
+SF:mestamp:\x201000394415\r\n\r\n")%r(FourOhFourRequest,91,"HTTP/1\.1\x204
+SF:03\x20Forbidden\r\nContent-Length:\x200\r\nServer:\x20AirTunes/835\.19\
+SF:.5\r\nX-Apple-ProcessingTime:\x202\r\nX-Apple-RequestReceivedTimestamp:
+SF:\x201000399430\r\n\r\n")%r(SIPOptions,A3,"RTSP/1\.0\x20403\x20Forbidden
+SF:\r\nContent-Length:\x200\r\nServer:\x20AirTunes/835\.19\.5\r\nCSeq:\x20
+SF:42\x20OPTIONS\r\nX-Apple-ProcessingTime:\x200\r\nX-Apple-RequestReceive
+SF:dTimestamp:\x201000399455\r\n\r\n");
+MAC Address: 6E:43:67:B3:5B:DA (Unknown)
+Device type: general purpose
+Running: Apple macOS 11.X
+OS details: Apple macOS 11 (Big Sur) (Darwin 20.6.0)
+Network Distance: 1 hop
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   4.03 ms 192.168.0.101
+
+Nmap scan report for 192.168.0.103
+Host is up (0.0073s latency).
+Not shown: 978 closed tcp ports (reset)
+PORT     STATE SERVICE     VERSION
+21/tcp   open  ftp         vsftpd 2.3.4
+|_ftp-anon: Anonymous FTP login allowed (FTP code 230)
+| ftp-syst: 
+|   STAT: 
+| FTP server status:
+|      Connected to 192.168.0.106
+|      Logged in as ftp
+|      TYPE: ASCII
+|      No session bandwidth limit
+|      Session timeout in seconds is 300
+|      Control connection is plain text
+|      Data connections will be plain text
+|      vsFTPd 2.3.4 - secure, fast, stable
+|_End of status
+22/tcp   open  ssh         OpenSSH 4.7p1 Debian 8ubuntu1 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 60:0f:cf:e1:c0:5f:6a:74:d6:90:24:fa:c4:d5:6c:cd (DSA)
+|_  2048 56:56:24:0f:21:1d:de:a7:2b:ae:61:b1:24:3d:e8:f3 (RSA)
+23/tcp   open  telnet      Linux telnetd
+25/tcp   open  smtp        Postfix smtpd
+|_smtp-commands: metasploitable.localdomain, PIPELINING, SIZE 10240000, VRFY, ETRN, STARTTLS, ENHANCEDSTATUSCODES, 8BITMIME, DSN
+|_ssl-date: 2025-01-19T21:14:36+00:00; 0s from scanner time.
+| ssl-cert: Subject: commonName=ubuntu804-base.localdomain/organizationName=OCOSA/stateOrProvinceName=There is no such thing outside US/countryName=XX
+| Not valid before: 2010-03-17T14:07:45
+|_Not valid after:  2010-04-16T14:07:45
+| sslv2: 
+|   SSLv2 supported
+|   ciphers: 
+|     SSL2_RC2_128_CBC_WITH_MD5
+|     SSL2_DES_64_CBC_WITH_MD5
+|     SSL2_RC4_128_EXPORT40_WITH_MD5
+|     SSL2_RC2_128_CBC_EXPORT40_WITH_MD5
+|     SSL2_RC4_128_WITH_MD5
+|_    SSL2_DES_192_EDE3_CBC_WITH_MD5
+53/tcp   open  domain      ISC BIND 9.4.2
+| dns-nsid: 
+|_  bind.version: 9.4.2
+80/tcp   open  http        Apache httpd 2.2.8 (DAV/2)
+|_http-server-header: Apache/2.2.8 (Ubuntu) DAV/2
+|_http-title: Index of /
+| http-methods: 
+|_  Potentially risky methods: TRACE
+| http-ls: Volume /
+|   maxfiles limit reached (10)
+| SIZE  TIME               FILENAME
+| -     20-May-2012 15:30  dav/
+| -     20-May-2012 15:51  dvwa/
+| -     15-Mar-2012 16:30  mutillidae/
+| -     09-Dec-2008 12:24  phpMyAdmin/
+| 19    16-Apr-2010 02:12  phpinfo.php
+| -     14-May-2012 01:50  test/
+| -     14-May-2012 01:50  test/testoutput/
+| -     02-Mar-2007 07:23  tikiwiki-old/
+| -     31-Dec-2004 19:11  tikiwiki/
+| -     04-Jan-2003 20:22  twiki/
+|_
+111/tcp  open  rpcbind     2 (RPC #100000)
+| rpcinfo: 
+|   program version    port/proto  service
+|   100000  2            111/tcp   rpcbind
+|   100000  2            111/udp   rpcbind
+|   100003  2,3,4       2049/tcp   nfs
+|   100003  2,3,4       2049/udp   nfs
+|   100005  1,2,3      34758/udp   mountd
+|   100005  1,2,3      45072/tcp   mountd
+|   100021  1,3,4      37754/tcp   nlockmgr
+|   100021  1,3,4      41625/udp   nlockmgr
+|   100024  1          51413/udp   status
+|_  100024  1          58499/tcp   status
+139/tcp  open  netbios-ssn Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+445/tcp  open  netbios-ssn Samba smbd 3.0.20-Debian (workgroup: WORKGROUP)
+512/tcp  open  exec        netkit-rsh rexecd
+513/tcp  open  login?
+514/tcp  open  tcpwrapped
+1099/tcp open  java-rmi    GNU Classpath grmiregistry
+1524/tcp open  bindshell   Metasploitable root shell
+2049/tcp open  nfs         2-4 (RPC #100003)
+2121/tcp open  ftp         ProFTPD 1.3.1
+3306/tcp open  mysql       MySQL 5.0.51a-3ubuntu5
+| mysql-info: 
+|   Protocol: 10
+|   Version: 5.0.51a-3ubuntu5
+|   Thread ID: 8
+|   Capabilities flags: 43564
+|   Some Capabilities: SupportsCompression, Support41Auth, ConnectWithDatabase, SupportsTransactions, SwitchToSSLAfterHandshake, LongColumnFlag, Speaks41ProtocolNew
+|   Status: Autocommit
+|_  Salt: IO0?.f9)_&>F$}n1GQC8
+5432/tcp open  postgresql  PostgreSQL DB 8.3.0 - 8.3.7
+| ssl-cert: Subject: commonName=ubuntu804-base.localdomain/organizationName=OCOSA/stateOrProvinceName=There is no such thing outside US/countryName=XX
+| Not valid before: 2010-03-17T14:07:45
+|_Not valid after:  2010-04-16T14:07:45
+|_ssl-date: 2025-01-19T21:14:35+00:00; 0s from scanner time.
+5900/tcp open  vnc         VNC (protocol 3.3)
+| vnc-info: 
+|   Protocol version: 3.3
+|   Security types: 
+|_    VNC Authentication (2)
+6000/tcp open  X11         (access denied)
+6667/tcp open  irc         UnrealIRCd
+| irc-info: 
+|   users: 1
+|   servers: 1
+|   lusers: 1
+|   lservers: 0
+|   server: irc.Metasploitable.LAN
+|   version: Unreal3.2.8.1. irc.Metasploitable.LAN 
+|   uptime: 0 days, 0:01:13
+|   source ident: nmap
+|   source host: A27407F9.F0D9233E.FFFA6D49.IP
+|_  error: Closing Link: vvenblhbe[192.168.0.106] (Quit: vvenblhbe)
+8180/tcp open  http        Apache Tomcat/Coyote JSP engine 1.1
+|_http-favicon: Apache Tomcat
+|_http-title: Apache Tomcat/5.5
+|_http-server-header: Apache-Coyote/1.1
+MAC Address: 4E:BC:2E:BF:03:8A (Unknown)
+Device type: general purpose
+Running: Linux 2.6.X
+OS CPE: cpe:/o:linux:linux_kernel:2.6
+OS details: Linux 2.6.9 - 2.6.33
+Network Distance: 1 hop
+Service Info: Hosts:  metasploitable.localdomain, metasploitable.localdomain, irc.Metasploitable.LAN; OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+
+Host script results:
+| smb-security-mode: 
+|   account_used: <blank>
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+| smb-os-discovery: 
+|   OS: Unix (Samba 3.0.20-Debian)
+|   Computer name: metasploitable
+|   NetBIOS computer name: 
+|   Domain name: localdomain
+|   FQDN: metasploitable.localdomain
+|_  System time: 2025-01-19T16:13:57-05:00
+|_nbstat: NetBIOS name: METASPLOITABLE, NetBIOS user: <unknown>, NetBIOS MAC: <unknown> (unknown)
+|_smb2-time: Protocol negotiation failed (SMB2)
+|_clock-skew: mean: 1h15m00s, deviation: 2h30m01s, median: 0s
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   7.31 ms 192.168.0.103
+
+Nmap scan report for 192.168.0.111
+Host is up.
+All 1000 scanned ports on 192.168.0.111 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+MAC Address: 98:43:FA:6E:CB:2A (Intel Corporate)
+Too many fingerprints match this host to give specific OS details
+Network Distance: 1 hop
+
+TRACEROUTE
+HOP RTT ADDRESS
+1   --  192.168.0.111
+
+Nmap scan report for 192.168.0.112
+Host is up (0.0023s latency).
+Not shown: 994 filtered tcp ports (no-response)
+PORT     STATE SERVICE       VERSION
+80/tcp   open  http          Apache httpd 2.4.58 ((Win64) OpenSSL/3.1.3 PHP/8.2.12)
+|_http-server-header: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12
+| http-title: Welcome to XAMPP
+|_Requested resource was http://192.168.0.112/dashboard/
+135/tcp  open  msrpc         Microsoft Windows RPC
+139/tcp  open  netbios-ssn   Microsoft Windows netbios-ssn
+443/tcp  open  ssl/http      Apache httpd 2.4.58 ((Win64) OpenSSL/3.1.3 PHP/8.2.12)
+| tls-alpn: 
+|_  http/1.1
+|_http-server-header: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12
+| ssl-cert: Subject: commonName=localhost
+| Not valid before: 2009-11-10T23:48:47
+|_Not valid after:  2019-11-08T23:48:47
+|_ssl-date: TLS randomness does not represent time
+| http-title: Welcome to XAMPP
+|_Requested resource was https://192.168.0.112/dashboard/
+445/tcp  open  microsoft-ds?
+3306/tcp open  mysql         MySQL 5.5.5-10.4.32-MariaDB
+| mysql-info: 
+|   Protocol: 10
+|   Version: 5.5.5-10.4.32-MariaDB
+|   Thread ID: 10
+|   Capabilities flags: 63486
+|   Some Capabilities: SupportsCompression, Support41Auth, InteractiveClient, IgnoreSigpipes, DontAllowDatabaseTableColumn, ConnectWithDatabase, ODBCClient, SupportsTransactions, LongColumnFlag, FoundRows, Speaks41ProtocolOld, IgnoreSpaceBeforeParenthesis, Speaks41ProtocolNew, SupportsLoadDataLocal, SupportsMultipleStatments, SupportsMultipleResults, SupportsAuthPlugins
+|   Status: Autocommit
+|   Salt: @\1}DyV#I'$~r?$5}9@u
+|_  Auth Plugin Name: mysql_native_password
+MAC Address: 12:19:3F:50:9D:7C (Unknown)
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: general purpose|phone
+Running (JUST GUESSING): Microsoft Windows 11|10|2022|Phone|2008 (97%)
+OS CPE: cpe:/o:microsoft:windows_10 cpe:/o:microsoft:windows cpe:/o:microsoft:windows_server_2008::sp1
+Aggressive OS guesses: Microsoft Windows 11 21H2 (97%), Microsoft Windows 10 (92%), Microsoft Windows Server 2022 (91%), Microsoft Windows Phone 7.5 or 8.0 (88%), Microsoft Windows Server 2008 SP1 (88%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 1 hop
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-security-mode: 
+|   3:1:1: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2025-01-19T21:13:57
+|_  start_date: N/A
+|_nbstat: NetBIOS name: WINDOWS-2RKLF86, NetBIOS user: <unknown>, NetBIOS MAC: 12:19:3f:50:9d:7c (unknown)
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   2.30 ms 192.168.0.112
+
+Nmap scan report for 192.168.0.106
+Host is up (0.000079s latency).
+All 1000 scanned ports on 192.168.0.106 are in ignored states.
+Not shown: 1000 closed tcp ports (reset)
+Too many fingerprints match this host to give specific OS details
+Network Distance: 0 hops
+
+Post-scan script results:
+| clock-skew: 
+|   1h15m00s: 
+|     192.168.0.103
+|_    192.168.0.112
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 256 IP addresses (6 hosts up) scanned in 100.74 seconds
+                                                                   

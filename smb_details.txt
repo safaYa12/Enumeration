@@ -1,0 +1,224 @@
+# Nmap 7.94SVN scan initiated Mon Jan 20 15:51:29 2025 as: /usr/lib/nmap/nmap -p 139,445 --script=smb-enum-shares,smb-enum-users,smb-os-discovery -oN smb_details.txt 192.168.0.103 192.168.0.112
+Nmap scan report for 192.168.0.103
+Host is up (0.0013s latency).
+
+PORT    STATE SERVICE
+139/tcp open  netbios-ssn
+445/tcp open  microsoft-ds
+MAC Address: 4E:BC:2E:BF:03:8A (Unknown)
+
+Host script results:
+| smb-enum-shares: 
+|   account_used: <blank>
+|   \\192.168.0.103\ADMIN$: 
+|     Type: STYPE_IPC
+|     Comment: IPC Service (metasploitable server (Samba 3.0.20-Debian))
+|     Users: 1
+|     Max Users: <unlimited>
+|     Path: C:\tmp
+|     Anonymous access: <none>
+|   \\192.168.0.103\IPC$: 
+|     Type: STYPE_IPC
+|     Comment: IPC Service (metasploitable server (Samba 3.0.20-Debian))
+|     Users: 1
+|     Max Users: <unlimited>
+|     Path: C:\tmp
+|     Anonymous access: READ/WRITE
+|   \\192.168.0.103\opt: 
+|     Type: STYPE_DISKTREE
+|     Comment: 
+|     Users: 1
+|     Max Users: <unlimited>
+|     Path: C:\tmp
+|     Anonymous access: <none>
+|   \\192.168.0.103\print$: 
+|     Type: STYPE_DISKTREE
+|     Comment: Printer Drivers
+|     Users: 1
+|     Max Users: <unlimited>
+|     Path: C:\var\lib\samba\printers
+|     Anonymous access: <none>
+|   \\192.168.0.103\tmp: 
+|     Type: STYPE_DISKTREE
+|     Comment: oh noes!
+|     Users: 1
+|     Max Users: <unlimited>
+|     Path: C:\tmp
+|_    Anonymous access: READ/WRITE
+| smb-os-discovery: 
+|   OS: Unix (Samba 3.0.20-Debian)
+|   Computer name: metasploitable
+|   NetBIOS computer name: 
+|   Domain name: localdomain
+|   FQDN: metasploitable.localdomain
+|_  System time: 2025-01-20T04:51:30-05:00
+| smb-enum-users: 
+|   METASPLOITABLE\backup (RID: 1068)
+|     Full name:   backup
+|     Flags:       Account disabled, Normal user account
+|   METASPLOITABLE\bin (RID: 1004)
+|     Full name:   bin
+|     Flags:       Account disabled, Normal user account
+|   METASPLOITABLE\bind (RID: 1210)
+|     Flags:       Account disabled, Normal user account
+|   METASPLOITABLE\daemon (RID: 1002)
+|     Full name:   daemon
+|     Flags:       Account disabled, Normal user account
+|   METASPLOITABLE\dhcp (RID: 1202)
+|     Flags:       Account disabled, Normal user account
+|   METASPLOITABLE\distccd (RID: 1222)
+|     Flags:       Account disabled, Normal user account
+|   METASPLOITABLE\ftp (RID: 1214)
+|     Flags:       Account disabled, Normal user account
+|   METASPLOITABLE\games (RID: 1010)
+|     Full name:   games
+|     Flags:       Account disabled, Normal user account
+|   METASPLOITABLE\gnats (RID: 1082)
+|     Full name:   Gnats Bug-Reporting System (admin)
+|     Flags:       Account disabled, Normal user account
+|   METASPLOITABLE\irc (RID: 1078)
+|     Full name:   ircd
+|     Flags:       Account disabled, Normal user account
+|   METASPLOITABLE\klog (RID: 1206)
+|     Flags:       Account disabled, Normal user account
+|   METASPLOITABLE\libuuid (RID: 1200)
+|     Flags:       Account disabled, Normal user account
+|   METASPLOITABLE\list (RID: 1076)
+|     Full name:   Mailing List Manager
+|     Flags:       Account disabled, Normal user account
+|   METASPLOITABLE\lp (RID: 1014)
+|     Full name:   lp
+|     Flags:       Account disabled, Normal user account
+|   METASPLOITABLE\mail (RID: 1016)
+|     Full name:   mail
+|     Flags:       Account disabled, Normal user account
+|   METASPLOITABLE\man (RID: 1012)
+|     Full name:   man
+|     Flags:       Account disabled, Normal user account
+|   METASPLOITABLE\msfadmin (RID: 3000)
+|     Full name:   msfadmin,,,
+|     Flags:       Normal user account
+|   METASPLOITABLE\mysql (RID: 1218)
+|     Full name:   MySQL Server,,,
+|     Flags:       Account disabled, Normal user account
+|   METASPLOITABLE\news (RID: 1018)
+|     Full name:   news
+|     Flags:       Account disabled, Normal user account
+|   METASPLOITABLE\nobody (RID: 501)
+|     Full name:   nobody
+|     Flags:       Account disabled, Normal user account
+|   METASPLOITABLE\postfix (RID: 1212)
+|     Flags:       Account disabled, Normal user account
+|   METASPLOITABLE\postgres (RID: 1216)
+|     Full name:   PostgreSQL administrator,,,
+|     Flags:       Account disabled, Normal user account
+|   METASPLOITABLE\proftpd (RID: 1226)
+|     Flags:       Account disabled, Normal user account
+|   METASPLOITABLE\proxy (RID: 1026)
+|     Full name:   proxy
+|     Flags:       Account disabled, Normal user account
+|   METASPLOITABLE\root (RID: 1000)
+|     Full name:   root
+|     Flags:       Account disabled, Normal user account
+|   METASPLOITABLE\service (RID: 3004)
+|     Full name:   ,,,
+|     Flags:       Account disabled, Normal user account
+|   METASPLOITABLE\sshd (RID: 1208)
+|     Flags:       Account disabled, Normal user account
+|   METASPLOITABLE\sync (RID: 1008)
+|     Full name:   sync
+|     Flags:       Account disabled, Normal user account
+|   METASPLOITABLE\sys (RID: 1006)
+|     Full name:   sys
+|     Flags:       Account disabled, Normal user account
+|   METASPLOITABLE\syslog (RID: 1204)
+|     Flags:       Account disabled, Normal user account
+|   METASPLOITABLE\telnetd (RID: 1224)
+|     Flags:       Account disabled, Normal user account
+|   METASPLOITABLE\tomcat55 (RID: 1220)
+|     Flags:       Account disabled, Normal user account
+|   METASPLOITABLE\user (RID: 3002)
+|     Full name:   just a user,111,,
+|     Flags:       Normal user account
+|   METASPLOITABLE\uucp (RID: 1020)
+|     Full name:   uucp
+|     Flags:       Account disabled, Normal user account
+|   METASPLOITABLE\www-data (RID: 1066)
+|     Full name:   www-data
+|_    Flags:       Account disabled, Normal user account
+
+Nmap scan report for 192.168.0.112
+Host is up (0.0017s latency).
+
+PORT    STATE SERVICE
+139/tcp open  netbios-ssn
+445/tcp open  microsoft-ds
+MAC Address: 12:19:3F:50:9D:7C (Unknown)
+
+# Nmap done at Mon Jan 20 15:51:31 2025 -- 2 IP addresses (2 hosts up) scanned in 1.09 seconds
+nmap -A -p 139,445 192.168.0.103 192.168.0.112 
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2025-01-20 15:53 +06
+Nmap scan report for 192.168.0.103
+Host is up (0.0020s latency).
+
+PORT    STATE SERVICE     VERSION
+139/tcp open  netbios-ssn Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+445/tcp open  netbios-ssn Samba smbd 3.0.20-Debian (workgroup: WORKGROUP)
+MAC Address: 4E:BC:2E:BF:03:8A (Unknown)
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: general purpose
+Running: Linux 2.6.X
+OS CPE: cpe:/o:linux:linux_kernel:2.6
+OS details: Linux 2.6.9 - 2.6.33
+Network Distance: 1 hop
+
+Host script results:
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+| smb-os-discovery: 
+|   OS: Unix (Samba 3.0.20-Debian)
+|   Computer name: metasploitable
+|   NetBIOS computer name: 
+|   Domain name: localdomain
+|   FQDN: metasploitable.localdomain
+|_  System time: 2025-01-20T04:53:31-05:00
+|_clock-skew: mean: 2h30m00s, deviation: 3h32m08s, median: 0s
+|_smb2-time: Protocol negotiation failed (SMB2)
+|_nbstat: NetBIOS name: METASPLOITABLE, NetBIOS user: <unknown>, NetBIOS MAC: <unknown> (unknown)
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   1.98 ms 192.168.0.103
+
+Nmap scan report for 192.168.0.112
+Host is up (0.0019s latency).
+
+PORT    STATE SERVICE       VERSION
+139/tcp open  netbios-ssn   Microsoft Windows netbios-ssn
+445/tcp open  microsoft-ds?
+MAC Address: 12:19:3F:50:9D:7C (Unknown)
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Aggressive OS guesses: Microsoft Windows Phone 7.5 or 8.0 (94%), Microsoft Windows Embedded Standard 7 (93%), Microsoft Windows 10 1511 - 1607 (92%), Microsoft Windows 10 1511 (91%), Microsoft Windows Server 2008 R2 or Windows 8.1 (91%), Microsoft Windows Server 2016 (91%), Microsoft Windows 7 Professional or Windows 8 (91%), Microsoft Windows Vista SP0 or SP1, Windows Server 2008 SP1, or Windows 7 (91%), Microsoft Windows 11 21H2 (91%), Microsoft Windows Vista SP2, Windows 7 SP1, or Windows Server 2008 (90%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 1 hop
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-time: 
+|   date: 2025-01-20T09:53:30
+|_  start_date: N/A
+| smb2-security-mode: 
+|   3:1:1: 
+|_    Message signing enabled but not required
+|_nbstat: NetBIOS name: WINDOWS-2RKLF86, NetBIOS user: <unknown>, NetBIOS MAC: 12:19:3f:50:9d:7c (unknown)
+|_clock-skew: -1s
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   1.95 ms 192.168.0.112
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 2 IP addresses (2 hosts up) scanned in 55.70 seconds
